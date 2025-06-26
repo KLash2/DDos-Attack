@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+# This code write by Eng.Senior KLash
+if [[ "$id -u" -ne 0 ]]; then
+  echo "
+Please Run This Programm as Root!
+"
+  exit 1
+fi
+printf '\033]2;DDos-attack/Updating\a'
+clear
+echo "Updating DDos-Attack Tool..."
+sleep 2
+cd .. && cd .. && rm -r DDos-Attack && git clone https://github.com/KLash2/DDos-Attack && cd DDos-Attack && bash install.sh
+echo "
+Updating..., Finish...!
+
+"
+exit 1
